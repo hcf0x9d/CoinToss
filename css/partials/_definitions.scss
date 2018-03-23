@@ -1,0 +1,98 @@
+/**
+ * SASS Definitions
+ *
+ * This file includes the following definitions:
+    - Font imports and variable definition
+    - Color definitions
+    - Mixins (TBD)
+ *
+ */
+
+// Fonts
+$fontdir: '/fonts/';
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url($fontdir + 'RobotoSlab-Bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url($fontdir + 'RobotoSlab-Regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url($fontdir + 'RobotoSlab-Light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url($fontdir + 'Roboto-Thin-webfont.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url($fontdir + 'Roboto-Light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url($fontdir + 'Roboto-Regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url($fontdir + 'Roboto-Bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+$sans:          'Roboto', sans-serif;
+$slab:          'Roboto Slab', serif;
+
+// Brand Primary Colors
+$ci-green:      #6CB88B;
+$ci-blue:       #009FA6;
+$ci-blue-dk:    #006474;
+$ci-slate:      #38495C;
+
+// Brand Neutrals
+$ci-gray-blk:   #3D3D3D;
+$ci-gray-dk:    #444444;
+$ci-gray:       #858585;
+$ci-gray-lt:    #BEBEBE;
+$ci-gray-ltst:  #E4E4E4;
+$ci-white:      #F1F1F1;
+
+// UI Colors
+$ui-green:        #94C656;
+$ui-green-lt:     #B4D789;
+$ui-seafoam:      #5FC3C7;
+$ui-moonstone:    #478F9B;
+$ui-orange:       #ED6E00;
+$ui-orange-lt:    #F29A4D;
+$ui-magenta:      #AE005F;
+$ui-magenta-lt:   #D24391;
+$ui-purple:       #61078F;
+$ui-purple-lt:    #8A3DB1;
+$ui-indigo:       #3E2B6B;
+$ui-indigo-lt:    #564482;
+$ui-navy:         #002080;
+$ui-navy-lt:      #334D99;
+
+// For Links Only
+$ui-link:         #166AD9;
+$ui-link-visited: #3E2B6B;
+
+// Status Colors Only
+$state-green:     #00A55B;
+$state-yellow:    #F3D600;
+$state-red:       #ED0007;

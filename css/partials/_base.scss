@@ -1,0 +1,37 @@
+html {
+  font-family: $slab;
+  font-size: 100%;
+  min-height: 100vh;
+}
+
+// Larger font sizes for larger screens
+@media screen and (min-width: 2000px) {
+  html {
+    font-size: 130%;
+  }
+}
+
+body {
+  min-height: 100vh;
+}
+/**
+ * Card Style Elements
+ *
+ * Cards can take many different styles and shapes, but these should get you started.  You can override the cards by
+ * Including additional .mod-* classes
+ *
+ * @markup
+   <li class="card mod-error">
+      <div class="card-col">
+          <h2 class="title">DAS-4564</h2>
+          <p class="secondary mod-helper"><b>Reporter</b> Automated</p>
+          <ul class="statusIconsList">
+              <li class="item">I</li>
+              <li class="item">I</li>
+          </ul>
+      </div>
+      <div class="card-col">
+          ...
+      </div>
+  </li>
+ */

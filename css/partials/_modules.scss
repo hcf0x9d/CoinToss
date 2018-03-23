@@ -1,0 +1,46 @@
+.body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.stage {
+  perspective: 1000;
+  width: 25vh;
+  height: 25vh;
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  & .coin {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+
+    & .coin-face {
+      width: 25vh;
+      height: 25vh;
+      border-radius: 100%;
+      background: #ccc;
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      line-height: 100px;
+      text-align: center;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+      transition: all 0.25s ease;
+    }
+
+
+  }
+
+  &.is-flipping .coin {
+    transform: rotateY(360deg);
+
+    & .coin-face {
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+  }
+}

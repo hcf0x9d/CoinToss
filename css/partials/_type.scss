@@ -1,0 +1,42 @@
+$scale: 0.25;
+
+.title {
+  &.mod-view {
+    font: normal 300 (1 + $scale * 1em)/1 $sans;
+  }
+  //
+  //&.mod-section {
+  //  color: $ci-gray;
+  //  font: normal 600 1.5em/1 $sans;
+  //  padding: 5px 0;
+  //
+  //  &.mod-nomargin {
+  //    margin: 0;
+  //  }
+  //}
+}
+
+.section-headline {
+  font: normal 400 (1 + $scale * 1em)/1 $sans;
+  margin-bottom: 0.5em;
+
+  &.mod-gray {
+    color: $ci-gray;
+  }
+}
+
+.subheadline {
+  font: normal 300 (1 + $scale * 1em)/1 $sans;
+}
+
+.secondary {
+  font: normal 0.70em/1.4 $slab;
+
+  &.mod-helper {
+    color: $ci-gray;
+  }
+}
+
+a { color: $ui-link !important; }
+b { font-weight: 700; }
+
