@@ -1,0 +1,228 @@
+/**
+*  Standard Stylesheet
+*
+*  Filename: style.scss
+*  Creator: Jason Fukura
+*
+*/
+/**
+ * SASS Definitions
+ *
+ * This file includes the following definitions:
+    - Font imports and variable definition
+    - Color definitions
+    - Mixins (TBD)
+ *
+ */
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url("/fonts/RobotoSlab-Bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url("/fonts/RobotoSlab-Regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url("/fonts/RobotoSlab-Light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("/fonts/Roboto-Thin-webfont.woff") format("woff");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("/fonts/Roboto-Light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("/fonts/Roboto-Regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("/fonts/Roboto-Bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+/* RESETS =================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  -khtml-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none; }
+
+/* BASE ===================================================================== */
+img {
+  border: none;
+  max-width: 100%; }
+
+.title.mod-view {
+  font: normal 300 1.25em "Roboto", sans-serif; }
+
+.section-headline {
+  font: normal 400 1.25em "Roboto", sans-serif;
+  margin-bottom: 0.5em; }
+  .section-headline.mod-gray {
+    color: #858585; }
+
+.subheadline {
+  font: normal 300 1.25em "Roboto", sans-serif; }
+
+.secondary {
+  font: normal 0.7em/1.4 "Roboto Slab", serif; }
+  .secondary.mod-helper {
+    color: #858585; }
+
+a {
+  color: #166AD9 !important; }
+
+b {
+  font-weight: 700; }
+
+html {
+  font-family: "Roboto Slab", serif;
+  font-size: 100%;
+  min-height: 100vh; }
+
+@media screen and (min-width: 2000px) {
+  html {
+    font-size: 130%; } }
+
+body {
+  min-height: 100vh; }
+
+/**
+ * Card Style Elements
+ *
+ * Cards can take many different styles and shapes, but these should get you started.  You can override the cards by
+ * Including additional .mod-* classes
+ *
+ * @markup
+   <li class="card mod-error">
+      <div class="card-col">
+          <h2 class="title">DAS-4564</h2>
+          <p class="secondary mod-helper"><b>Reporter</b> Automated</p>
+          <ul class="statusIconsList">
+              <li class="item">I</li>
+              <li class="item">I</li>
+          </ul>
+      </div>
+      <div class="card-col">
+          ...
+      </div>
+  </li>
+ */
+.title {
+  font: normal 2em/1 'Arial'; }
+
+.body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.stage {
+  perspective: 1000;
+  width: 25vh;
+  height: 25vh;
+  margin-top: 2em;
+  margin-bottom: 2em; }
+  .stage .coin {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative; }
+    .stage .coin .coin-face {
+      width: 25vh;
+      height: 25vh;
+      border-radius: 100%;
+      background: #ccc;
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      line-height: 25vh;
+      font-size: 5vh;
+      text-align: center;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+      transition: all 0.25s ease;
+      background: linear-gradient(45deg, #dfb667 0%, #f9f3e8 56%, #e7c074 96%);
+      color: #dfb667; }
+      .stage .coin .coin-face .text {
+        z-index: 1000;
+        position: relative; }
+      .stage .coin .coin-face:after {
+        content: "";
+        width: 23vh;
+        height: 23vh;
+        display: block;
+        top: 1vh;
+        left: 1vh;
+        position: absolute;
+        border-radius: 100%;
+        z-index: 600;
+        background: linear-gradient(45deg, #dfb667 0%, #f9f3e8 56%, #e7c074 96%);
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(209, 156, 53, 0.3);
+        border-right: 1px solid rgba(209, 156, 53, 0.5);
+        box-shadow: inset 0 0 2px 2px rgba(153, 106, 26, 0.05); }
+      .stage .coin .coin-face:before {
+        content: "";
+        width: 25vh;
+        height: 25vh;
+        display: block;
+        position: absolute;
+        border-radius: 100%;
+        z-index: 500;
+        background: linear-gradient(135deg, #d19c35 0%, #f7e6c5 50%, #e8b558 100%);
+        border: 1px solid #e6b86a; }
+  .stage.is-flipping .coin {
+    transform: rotateY(360deg); }
+    .stage.is-flipping .coin .coin-face {
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); }
+
+.btn {
+  background: #6CB88B;
+  border: 2px solid #6CB88B;
+  border-radius: 3px;
+  padding: 10px 20px;
+  color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  transition: all 0.25s ease;
+  outline: none; }
+  .btn:hover {
+    background: #FFFFFF;
+    color: #6CB88B; }
