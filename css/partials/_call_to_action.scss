@@ -1,48 +1,17 @@
 .btn {
+  background: $ci-green;
+  border: 2px solid $ci-green;
+  border-radius: 3px;
+  padding: 10px 20px;
+  color: #FFFFFF;
   cursor: pointer;
+  box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.3 );
+  font-weight: bold;
+  transition: all 0.25s ease;
+  outline: none;
 
-  &.mod-ui-config {
-    background: none;
-    border: none;
-    border-radius: 100%;
-    height: 2.5em;
-    margin-left: 10px;
-    outline: none;
-    width: 2.5em;
-
-    &:hover,
-    &:focus {
-      & .icon path {
-        stroke: $ui-link;
-      }
-    }
-
-  }
-
-  &.mod-close {
-    background: none;
-    border: none;
-    color: $ci-gray-lt;
-    font: normal 200 3em/1 $sans;
-    outline: none;
-    transition: all 0.25s ease;
-
-    &:hover,
-    &:focus {
-      color: $ci-gray-dk;
-    }
-  }
-
-  &.mod-textlink {
-    background: none;
-    border: none;
-    color: $ui-link;
-    margin-left: 10px;
-    vertical-align: middle;
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
+  &:hover {
+    background: #FFFFFF;
+    color: $ci-green;
   }
 }

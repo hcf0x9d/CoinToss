@@ -4,7 +4,7 @@ class Coin {
 
         this.coin = document.getElementById( coin );
         this.button = document.getElementById( button );
-        this.face = this.coin.getElementsByClassName( 'coin-face' )[0];
+        this.face = this.coin.getElementsByClassName( 'text' )[0];
 
         this.button.addEventListener( 'click', () => {
 
@@ -13,7 +13,7 @@ class Coin {
 
             setTimeout( () => {
                 this.coin.classList.remove( 'is-flipping' );
-            }, 300 )
+            }, 300 );
 
             this.tossCoin();
 
@@ -32,7 +32,7 @@ class Coin {
 
             } else {
 
-                this.face.innerText = 'No Comma';
+                this.face.innerText = 'No';
 
             }
 
